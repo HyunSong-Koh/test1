@@ -30,3 +30,4 @@ with open("result.txt",'w') as handle:
     handle.write(f"C: {d['C']}\n")
     handle.write(f"G: {d['G']}\n")
     handle.write(f"T: {d['T']}\n")
+   
