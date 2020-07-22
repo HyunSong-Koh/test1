@@ -1,0 +1,26 @@
+# k-mer generation
+
+import sys
+"""
+k개의 base로 이루어진 서열을 k-mer라고 부름,
+
+숫자 n을 입력받아 n-mer를 생성하는 프로그램.
+"""
+
+
+l1 = ["A","C","G","T"]
+l2 = ["A","C","G","T"]
+
+def mer(l1, l2, n):
+    if n == 1:
+        return l2 
+
+    ltmp = []
+    for s1 in l1:
+        for s2 in l2:
+            ltmp.append(s1+s2)
+    return mer(l1, ltmp, n-1)   #재귀
+
+n = int(sys.argv[1]) #파일 실행시 인수로 입력받은 문자 int형으로 받음.
+
+print(mer(l1,l2,n))
