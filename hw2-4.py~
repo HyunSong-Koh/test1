@@ -34,4 +34,4 @@ if __name__ == "__main__":
     txt = read_csv(file_name)
     to_json(txt,"hw2.json")
 
-
+# key 값을 float 형으로 변경하는법??

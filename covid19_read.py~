@@ -43,6 +43,7 @@ with open("result11.txt",'w') as handle:
 
 
 import sys
+import gzip
 
 if len(sys.argv) != 2:
     print(f"#usage: python {sys.argv[0]} [fasta.gz]")
@@ -80,5 +81,5 @@ with open("covid_result.txt",'w') as handle:
     handle.write(f"C: {d['C']}\n")
     handle.write(f"G: {d['G']}\n")
     handle.write(f"T: {d['T']}\n")
-    handle.write(f"total seq num: {total}")
+    handle.write(f"total seq num: {total}") # 출력안됨..?
 
